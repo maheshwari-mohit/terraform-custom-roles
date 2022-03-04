@@ -24,4 +24,5 @@ resource "google_project_iam_custom_role" "project_custom_role" {
   title       = jsondecode(data.local_file.config.content)["role_id"]
   description = "A description"
   permissions = jsondecode(data.local_file.config.content)["permissions"]
+  stage       = "ALPHA"
 }
