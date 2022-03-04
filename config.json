@@ -1,0 +1,9 @@
+{
+    "org_id": "",
+    "project_id": "testing-dlp-terraform",
+    "role_id": "my_custom_role",
+    "permissions": [
+        "storage.objects.get",
+        "storage.objects.list"
+    ]
+}
