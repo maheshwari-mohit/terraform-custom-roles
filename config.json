@@ -1,14 +1,17 @@
 {
     "org_id": "",
     "project_id": "testing-dlp-terraform",
-    "roles": [
+    "existing_role": [
         {
-            "role_id": "my_custom_role",
+            "role_id": "custom_role",
             "permissions": [
                 "storage.objects.get",
                 "storage.objects.list"
             ]
-        },
+        }
+    ],
+    "roles": [
+        
         {
             "role_id": "my_custom_role1",
             "permissions": [
