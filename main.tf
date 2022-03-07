@@ -25,17 +25,17 @@ resource "google_project_iam_custom_role" "project_custom_role" {
   project     = jsondecode(data.local_file.config.content)["project_id"]
   role_id     = jsondecode(each.value)["role_id"]
   title       = jsondecode(each.value)["role_id"]
-  description = "A description"
+  description = jsondecode(each.value)["description"]
   permissions = jsondecode(each.value)["permissions"]
   stage       = "ALPHA"
 }
 
-resource "google_project_iam_custom_role" "custom_role_import" {
+# resource "google_project_iam_custom_role" "custom_role_import" {
 
-    project = "testing-dlp-terraform"
-    role_id = "custom_role"
-    title       = "title"
-    description = "A description"
-    permissions = ["storage.buckets.create",
-                    "storage.buckets.delete","storage.buckets.get"]
-}
+#     project = "testing-dlp-terraform"
+#     role_id = "custom_role"
+#     title       = "title"
+#     description = "A description"
+#     permissions = ["storage.buckets.create",
+#                     "storage.buckets.delete","storage.buckets.get"]
+# }

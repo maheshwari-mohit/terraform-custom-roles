@@ -17,7 +17,8 @@
             "permissions": [
                 "storage.objects.get",
                 "storage.objects.list"
-            ]
+            ],
+            "description": "A sample description"
         }
     ]
 }
