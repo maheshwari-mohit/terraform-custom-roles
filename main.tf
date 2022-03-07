@@ -29,3 +29,13 @@ resource "google_project_iam_custom_role" "project_custom_role" {
   permissions = jsondecode(each.value)["permissions"]
   stage       = "ALPHA"
 }
+
+resource "google_project_iam_custom_role" "custom_role_import" {
+
+    project = "testing-dlp-terraform"
+    role_id = "custom_role"
+    title       = "title"
+    description = "A description"
+    permissions = ["storage.buckets.create",
+                    "storage.buckets.delete","storage.buckets.get"]
+}
