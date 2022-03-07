@@ -1,24 +1,17 @@
 {
-    "org_id": "",
-    "project_id": "testing-dlp-terraform",
-    "existing_role": [
+    "org_id": "{Enter your org id, can be left blank if not available}",
+    "project_id": "{Enter your project id}",
+    "import_existing_role": "{yes or no in small case}",
+    "existing_role": {
+        "role_id": "{Enter existing custom role id}",
+        "permissions": ["{Enter the permissions you want to apply to exiting role}"],
+        "description": "{Enter a discription fitting the role}"
+    },
+    "new_roles": [
         {
-            "role_id": "custom_role",
-            "permissions": [
-                "storage.objects.get",
-                "storage.objects.list"
-            ]
-        }
-    ],
-    "roles": [
-        
-        {
-            "role_id": "my_custom_role1",
-            "permissions": [
-                "storage.objects.get",
-                "storage.objects.list"
-            ],
-            "description": "A sample description"
+            "role_id": "{Enter new custom role id}",
+            "permissions": ["{Enter the permissions you want to apply to new role}"],
+            "description": "{Enter a discription fitting the role}"
         }
     ]
 }
