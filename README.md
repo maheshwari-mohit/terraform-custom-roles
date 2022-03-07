@@ -4,11 +4,11 @@
 
 1. Gcloud shell access
 2. User running the script must have below permissions:
-orgpolicy.policies.list
-orgpolicy.policy.get
-resourcemanager.projects.get
-resourcemanager.projects.getIamPolicy
-resourcemanager.projects.setIamPolicy
+    * orgpolicy.policies.list
+    * orgpolicy.policy.get
+    * resourcemanager.projects.get
+    * resourcemanager.projects.getIamPolicy
+    * resourcemanager.projects.setIamPolicy
 
 To run the code please follow below commands.
 
